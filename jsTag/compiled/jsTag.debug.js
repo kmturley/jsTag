@@ -2,7 +2,7 @@
 * jsTag JavaScript Library - Editing tags based on angularJS 
 * Git: https://github.com/eranhirs/jsTag/tree/master
 * License: MIT (http://www.opensource.org/licenses/mit-license.php)
-* Compiled At: 11/12/2015 12:45
+* Compiled At: 12/24/2015 14:34
 **************************************************/
 'use strict';
 var jsTag = angular.module('jsTag', []);
@@ -587,9 +587,10 @@ var jsTag = angular.module('jsTag');
 // TODO: Maybe add A to 'restrict: E' for support in IE 8?
 jsTag.directive('jsTag', ['$templateCache', function($templateCache) {
   return {
-    restrict: 'E',
+    restrict: 'CE',
     scope: true,
     controller: 'JSTagMainCtrl',
+    replace: true,
     templateUrl: function($element, $attrs) {
       var mode = $attrs.jsTagMode || "default";
       return 'jsTag/source/templates/' + mode + '/js-tag.html';
