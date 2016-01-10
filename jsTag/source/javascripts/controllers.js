@@ -18,6 +18,7 @@ jsTag.controller('JSTagMainCtrl', ['$attrs', '$scope', 'InputService', 'TagsInpu
     angular.extend(options, userOptions);
   }
 
+  $scope.id = $attrs.id;
   $scope.options = options;
 
   // Export handlers to view

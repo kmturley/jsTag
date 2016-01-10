@@ -1,6 +1,7 @@
 <div
   class="jt-editor"
   ng-click="inputService.focusInput()" >
+  <input id="{{ id }}" type="hidden" value="{{ tagsCollection.getTagValues().join(', ') }}" />
   <span
     ng-repeat="tag in tagsCollection.tags | toArray:orderBy:'id'"
     ng-switch="tagsCollection.isTagEdited(tag)">
